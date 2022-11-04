@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "HoverHotkey",
+  "name": "HoverHotkey",
+  "author": "TechDiem",
+  "version": "0.0.1",
+  "description": "Shows a hovering button which simulates a key press",
+  "gameVersion": "1.19.0",
+  "dependsOn": {
+    "BSIPA": "^4.2.1",
+    "BeatSaberMarkupLanguage": "^1.6.0",
+    "BS Utils": "^1.11.1"
+  },
+  "links":{
+    "project-home": "https://github.com/techdiem/BeatSaberHoverHotkey",
+    "project-source": "https://github.com/techdiem/BeatSaberHoverHotkey"
+  }
+}
