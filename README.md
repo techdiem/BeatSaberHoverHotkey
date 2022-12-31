@@ -2,7 +2,7 @@
 Displays a hovering hotkey in-game that presses a keyboard button.
 It uses similar code for the gui as my MicMuter mod, but I thought it wouldn't fit into this mod, as ist allows broader applications besides sound.
 
-Compatible with **Beat Saber 1.19.0+**
+Compatible with **Beat Saber 1.27.0+**
 
 ## Installation
 * Required dependencies (can be installed using Mod Assistant)
@@ -22,6 +22,8 @@ Compatible with **Beat Saber 1.19.0+**
 	- Take the characters after 0x and convert them to decimal: [online converter](https://www.binaryhexconverter.com/hex-to-decimal-converter)
 	- Insert the result in the config as Hotkey
 	- **Example:** F2 Key: 0x71 -> put 71 in converter -> 113 in config
-    - You can also set the button text
-5) Set the configured key in the software you want to control, for example as deafen hotkey in discord if required by your use case
+5) Set the configured key in the software you want to control, for example as deafen hotkey in discord depending on your use case
 6) Start Beat Saber and move the button in the Mod Settings ingame to your desired position
+
+## Screenshot
+![](button_screenshot.jpg)
