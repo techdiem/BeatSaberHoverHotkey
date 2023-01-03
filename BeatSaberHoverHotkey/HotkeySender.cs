@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using HoverHotkey.Configuration;
 
 namespace HoverHotkey
 {
@@ -108,22 +109,59 @@ namespace HoverHotkey
         #endregion
 
 
-        public static void PressHotkey(short keycode)
+		private static short GetModifierKey()
         {
-			//Key Down
+			string confKey = PluginConfig.Instance.ModifierKey;
+			short keyID = -1;
+			switch (confKey)
+            {
+				case "shift":
+					keyID = 16;
+					break;
+				case "ctrl":
+					keyID = 17;
+					break;
+				case "alt":
+					keyID = 18;
+					break;
+			}
+			return keyID;
+        }
+
+		private static void KeyDown(short keycode)
+        {
 			INPUT keyDown = new INPUT();
 			keyDown.type = InputType.INPUT_KEYBOARD;
 			keyDown.U.ki.wVk = keycode;
 
 			SendInput(1, new INPUT[] { keyDown }, Marshal.SizeOf(keyDown));
+		}
 
-			//Key Up
+		private static void KeyUp(short keycode)
+		{
 			INPUT keyUp = new INPUT();
 			keyUp.type = InputType.INPUT_KEYBOARD;
 			keyUp.U.ki.wVk = keycode;
 			keyUp.U.ki.dwFlags = KEYEVENTF.KEYUP;
 
 			SendInput(1, new INPUT[] { keyUp }, Marshal.SizeOf(keyUp));
+		}
+
+		public static void PressHotkey(short keycode)
+        {
+			short modifierKey = GetModifierKey();
+			if (modifierKey != -1)
+            {
+				KeyDown(modifierKey);
+            }
+
+			KeyDown(keycode);
+			KeyUp(keycode);
+
+			if (modifierKey != -1)
+			{
+				KeyUp(modifierKey);
+			}
 		}
 
 	}

@@ -22,8 +22,13 @@ Compatible with **Beat Saber 1.27.0+**
 	- Take the characters after 0x and convert them to decimal: [online converter](https://www.binaryhexconverter.com/hex-to-decimal-converter)
 	- Insert the result in the config as Hotkey
 	- **Example:** F2 Key: 0x71 -> put 71 in converter -> 113 in config
-5) Set the configured key in the software you want to control, for example as deafen hotkey in discord depending on your use case
-6) Start Beat Saber and move the button in the Mod Settings ingame to your desired position
+5) Configure modifier key, available modifiers:
+    - none (just press the configured key without any modifiers, default)
+    - alt
+    - ctrl
+    - shift
+6) Set the configured key in the software you want to control, for example as deafen hotkey in discord depending on your use case
+7) Start Beat Saber and move the button in the Mod Settings ingame to your desired position
 
 ## Screenshot
 ![](button_screenshot.jpg)

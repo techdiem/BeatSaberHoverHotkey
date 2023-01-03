@@ -3,7 +3,7 @@
   "id": "HoverHotkey",
   "name": "HoverHotkey",
   "author": "TechDiem",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Shows a hovering button which simulates a key press",
   "gameVersion": "1.19.0",
   "dependsOn": {

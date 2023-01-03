@@ -14,6 +14,8 @@ namespace HoverHotkey.Configuration
         public virtual string ButtonText { get; set; } = "Hotkey";
         //List of keycodes: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
         public virtual short Hotkey { get; set; } = 0x71;
+        //Modifiers: none, alt, ctrl, shift
+        public virtual string ModifierKey { get; set; } = "none";
         public virtual Vector3 ScreenPos { get; set; } = new Vector3(-1.74f, 0.7f, 2f);
         public virtual Quaternion ScreenRot { get; set; } = Quaternion.Euler(25f, 330f, 6.5f);
 
