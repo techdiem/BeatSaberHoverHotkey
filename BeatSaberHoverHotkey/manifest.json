@@ -3,13 +3,13 @@
   "id": "HoverHotkey",
   "name": "HoverHotkey",
   "author": "TechDiem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shows a hovering button which simulates a key press",
-  "gameVersion": "1.19.0",
+  "gameVersion": "1.31.0",
   "dependsOn": {
-    "BSIPA": "^4.2.1",
-    "BeatSaberMarkupLanguage": "^1.6.0",
-    "BS Utils": "^1.11.1"
+    "BSIPA": "^4.3.0",
+    "BeatSaberMarkupLanguage": "^1.7.6",
+    "BS Utils": "^1.12.4"
   },
   "links":{
     "project-home": "https://github.com/techdiem/BeatSaberHoverHotkey",

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HoverHotkey.Configuration;
 using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.Attributes;
+using BeatSaberMarkupLanguage.Util;
 using TMPro;
 
 namespace HoverHotkey.UI
