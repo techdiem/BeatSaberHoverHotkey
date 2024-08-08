@@ -6,7 +6,7 @@
 		</horizontal>
 
 		<horizontal>
-			<text text='Click the button to show a white handle at the left side of the mute button.'/>
+			<text text='Click below to show a white handle at the left side of the hotkey button.'/>
 		</horizontal>
 		<horizontal>
 			<text text='Move the button to the position you want and disable the handle.'/>
