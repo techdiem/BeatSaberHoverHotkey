@@ -11,6 +11,7 @@ using HoverHotkey.Configuration;
 using HoverHotkey.UI;
 using BS_Utils.Utilities;
 using BeatSaberMarkupLanguage.Settings;
+using BeatSaberMarkupLanguage.Util;
 
 namespace HoverHotkey
 {
@@ -34,9 +35,26 @@ namespace HoverHotkey
         public void OnApplicationStart()
         {
             new GameObject("HoverHotkeyController").AddComponent<HoverHotkeyController>();
+        }
 
+        [OnEnable]
+        public void OnEnable()
+        {
+            //Wait for main menu to get initialized
+            MainMenuAwaiter.MainMenuInitializing += MenuReadyInit;
+        }
+
+        [OnDisable]
+        public void OnDisable()
+        {
+            MainMenuAwaiter.MainMenuInitializing -= MenuReadyInit;
+            BSMLSettings.Instance.RemoveSettingsMenu(ConfigView.instance);
+        }
+
+        private void MenuReadyInit()
+        {
             //Register mod settings menu button
-            BSMLSettings.instance.AddSettingsMenu("HoverHotkey", "HoverHotkey.UI.ConfigView.bsml", ConfigView.instance);
+            BSMLSettings.Instance.AddSettingsMenu("HoverHotkey", "HoverHotkey.UI.ConfigView.bsml", ConfigView.instance);
         }
 
         private void BSEvents_lateMenuSceneLoadedFresh(ScenesTransitionSetupDataSO obj)
