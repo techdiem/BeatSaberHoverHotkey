@@ -2,7 +2,7 @@
 Displays a hovering hotkey in-game that presses a keyboard button.
 It uses similar code for the gui as my MicMuter mod, but I thought it wouldn't fit into this mod, as ist allows broader applications besides sound.
 
-Compatible with **Beat Saber 1.40.0**
+Compatible with **Beat Saber 1.40.3**
 
 ## Installation
 * Required dependencies (can be installed using Mod Assistant)
